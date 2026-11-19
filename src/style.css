@@ -229,37 +229,6 @@ h1 em {
   font-size:30px;
   color:var(--burgundy);
   height:38px}
-.quick-tools {
-  display:flex;
-  justify-content:center;
-  gap:0;
-  border-top:1px solid var(--line);
-  border-bottom:1px solid var(--line);
-  padding:10px 0;
-  max-width:900px;
-  width:100%}
-.quick-tools button {
-  border:0;
-  border-right:1px solid var(--line);
-  border-radius:0;
-  font-size:11px;
-  display:flex;
-  gap:10px;
-  align-items:center;
-  justify-content:center;
-  flex:1;
-  white-space:nowrap;
-  padding:12px}
-.quick-tools button:last-child {
-  border-right:0}
-.quick-tools button>span {
-  color:var(--burgundy);
-  font-size:20px}
-.quick-tools b {
-  font-size:12px;
-  font-weight:400;
-  margin-left:8px;
-  color:var(--muted)}
 .welcome-foot {
   text-align:center;
   margin-top:28px;
@@ -603,11 +572,6 @@ input,select {
   flex-shrink:0}
 .tool-bar button {
   padding:9px}
-.quick-tools {
-  flex-wrap:wrap}
-.quick-tools button {
-  flex:0 0 33.33%;
-  border:0}
 .collection {
   margin-left:0}
 h1 {
@@ -659,11 +623,6 @@ h1 em {
   height:180px;
   width:85%;
   margin-top:30px}
-.quick-tools button {
-  padding:10px 5px;
-  font-size:10px}
-.quick-tools b {
-  display:none}
 .welcome-foot {
   margin-top:20px}
 footer {
@@ -724,8 +683,6 @@ h1 em {
   margin:7px 0}
 .welcome-foot button {
   margin-top:3px}
-.quick-tools {
-  padding:5px 0}
 }
 
 main:has(#workbench:not([hidden])) {
@@ -775,3 +732,8 @@ main:has(#workbench:not([hidden])) {
 @media(max-width:800px){.overlay-settings {width:195px;padding:12px}.overlay-pages {width:110px}.overlay-toolbar {gap:4px;padding:6px}.overlay-toolbar button{font-size:11px;padding:7px}.overlay-message{display:none}}
 @media(max-width:600px){.overlay-body{position:relative}.overlay-settings{position:absolute;right:0;top:0;bottom:0;width:180px;box-shadow:-2px 0 8px #0001;z-index:2}.overlay-settings:has(h3){display:none}.paper-scroll{padding:16px}.overlay-pages{width:95px}.overlay-pages button{min-height:110px}}
 
+#sample, #about, .header-actions .collection { min-height: 36px; }
+.header-actions .collection { display: inline-flex; align-items: center; }
+@media (max-width: 600px) {
+  #sample, #about, .header-actions .collection, .tool-bar button { min-height: 44px; }
+}
