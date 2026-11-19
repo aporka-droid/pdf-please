@@ -90,7 +90,7 @@ export async function setMode(mode) {
   updateProperties();
 }
 $('#open').onclick = $('#drop-zone').onclick = () => $('#file-input').click();
-$('.brand').onclick = event => { event.preventDefault(); task('Closing your document…',async()=>{if(!await confirmReplace())return;if(app.instance)await app.instance.UI.closeDocument();$('#welcome').hidden=false;$('#workbench').hidden=true;status('Ready when you are');}); };
+$('.brand').onclick = event => { event.preventDefault(); task('Closing your document…',async()=>{if(!await confirmReplace())return;if(app.instance)await app.instance.UI.closeDocument();$('#welcome').hidden=false;$('#workbench').hidden=true;status('');}); };
 $('#file-input').onchange = event => { const file = event.target.files[0]; event.target.value = ''; if (file) task('Opening your document…', () => openPDF(file)); };
 document.querySelectorAll('[data-mode]').forEach(button => button.onclick = () => task('Preparing your tools…', () => setMode(button.dataset.mode)));
 document.addEventListener('dragover', event => { if (event.dataTransfer.types.includes('Files')) { event.preventDefault(); $('#drop-zone').classList.add('dragging'); } });
