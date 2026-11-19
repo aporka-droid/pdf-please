@@ -737,3 +737,45 @@ main:has(#workbench:not([hidden])) {
 @media (max-width: 600px) {
   #sample, #about, .header-actions .collection, .tool-bar button { min-height: 44px; }
 }
+
+.please-footer-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 4px 18px;
+  width: 100%;
+  font: inherit;
+  letter-spacing: normal;
+}
+.please-footer-nav .please-origin {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 4px;
+  color: inherit;
+  font-size: 11px;
+  font-weight: 400;
+}
+.please-footer-nav a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  color: inherit;
+  font-size: 13px;
+  text-decoration: none;
+  text-underline-offset: 3px;
+}
+.please-footer-nav a.please-wordmark {
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: -.6px;
+}
+.please-footer-nav a:hover,
+.please-footer-nav a:focus-visible {
+  text-decoration: underline;
+}
+.please-site-footer { height: auto; flex-direction: column; align-items: stretch; gap: 0; }
+.pdf-footer-controls { display: flex; align-items: center; justify-content: space-between; gap: 8px; flex-wrap: wrap; }
+.pdf-footer-controls > span:first-child { display: inline-flex; align-items: center; gap: 7px; }
+.pdf-footer-controls #status:empty { display: none; }
+.pdf-footer-controls > span:first-child:has(#status:empty) { visibility: hidden; }
